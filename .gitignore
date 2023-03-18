@@ -1,0 +1,35 @@
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+npm-debug.log*
+*.tsbuildinfo
+
+# Cache
+.npm
+.cache
+.eslintcache
+
+# Compiled stuff
+dist
+esm
+public
+generated
+
+# Coverage
+coverage
+
+# dotenv environment variable files
+.env*
+!.env.example
+
+# Output of 'npm pack'
+*.tgz
+
+# Mac files
+.DS_Store

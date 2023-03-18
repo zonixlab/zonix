@@ -1,0 +1,28 @@
+{
+  "name": "@zonixlab/zonix-cli",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/zonixlab/zonix-cli.git",
+  "author": "ZonixLab <zonixlab@gmail.com> (https://github.com/zonixlab)",
+  "bugs": {
+    "url": "https://github.com/zonixlab/zonix-cli/discussions"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "prettier": "^2.8.4",
+    "typescript": "^5.0.2"
+  }
+}
