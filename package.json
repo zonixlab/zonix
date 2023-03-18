@@ -11,10 +11,10 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/zonixlab/zonix-cli.git",
+  "repository": "https://github.com/zonixlab/zonix.git",
   "author": "ZonixLab <zonixlab@gmail.com> (https://github.com/zonixlab)",
   "bugs": {
-    "url": "https://github.com/zonixlab/zonix-cli/discussions"
+    "url": "https://github.com/zonixlab/zonix/discussions"
   },
   "bin": {
     "zonix": "./dist/index.js"
