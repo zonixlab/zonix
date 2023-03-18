@@ -1,8 +1,10 @@
 {
-  "name": "@zonixlab/zonix-cli",
-  "version": "1.0.0",
+  "name": "zonix",
+  "version": "1.0.0-beta.11",
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
@@ -14,8 +16,11 @@
   "bugs": {
     "url": "https://github.com/zonixlab/zonix-cli/discussions"
   },
+  "bin": {
+    "zonix": "./dist/index.js"
+  },
+  "preferGlobal": true,
   "dependencies": {
-    "chalk": "^5.2.0",
     "commander": "^10.0.0"
   },
   "devDependencies": {
