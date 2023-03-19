@@ -1,2 +1,11 @@
 #!/usr/bin/env node
-export * from './commands/hello'
+import { Command } from 'commander'
+import { auth } from './commands/auth'
+import { hello } from './commands/hello'
+
+const program = new Command()
+
+program.addCommand(auth)
+program.addCommand(hello)
+
+program.parse(process.argv)
