@@ -1,4 +1,4 @@
-<img alt="GalactusHook banner" width="100%" src="https://i.ibb.co/0ymxwLN/zonix-cli.png" />
+<img alt="GalactusHook banner" width="100%" src="https://i.ibb.co/cTQg33G/zonix-cli-bg.png" />
 
 ## About
 
