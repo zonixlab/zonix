@@ -1,11 +1,13 @@
 import { config } from '../../config'
-import type { AuthProps } from '../../typings/Auth'
+import type { GeneralOptions } from '../../typings/General'
 
-export const authAction = ({ apiKey }: AuthProps) => {
-  if (!apiKey) {
-    return console.log('use the -k or --apiKey option to declare your API key')
+export const authAction = (options: GeneralOptions) => {
+  const key = options[Object.keys(options)[0]]
+
+  if (!key) {
+    return console.log(`\n* use the --key or -k option to declare your API key`)
   }
 
-  config.apiKey = apiKey
-  console.log(`Your apiKey: ${apiKey}`)
+  config.apiKey = key
+  console.log(`Your apiKey: ${key}`)
 }

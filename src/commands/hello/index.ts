@@ -1,11 +1,9 @@
 import { Command } from 'commander'
-
-interface HelloProps {
-  name: string
-}
+import { helloAction } from './helloAction'
+import type { GeneralOptions } from '../../typings/General'
 
 export const hello = new Command()
   .command('hello')
   .description('enter your name to receive a greeting')
-  .alias('hl')
-  .action(({ name }: HelloProps) => console.log(`Hello, ${name}!`))
+  .option('-n, --name <string>', 'your name')
+  .action((options: GeneralOptions) => helloAction(options))
