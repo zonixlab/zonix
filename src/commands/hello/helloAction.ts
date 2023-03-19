@@ -8,7 +8,7 @@ export const helloAction = (options: GeneralOptions) => {
     return console.log(
       `Greetings, little ${kleur.green(
         'Jedi'
-      )}. May the force be with you!\n\n* use --name or -n to declare your name and get a greeting `
+      )}. May the force be with you!\n\n* use --name or -n to declare your name and get a greeting`
     )
   }
 
