@@ -1,4 +1,4 @@
-<img alt="Zonix CLI banner" width="100%" src="https://i.ibb.co/cTQg33G/zonix-cli-bg.png" />
+<img alt="Zonix CLI banner" width="100%" src="https://i.ibb.co/hfgqmfw/zonix-cli.png" />
 
 ## About
 
@@ -10,10 +10,4 @@ Install globally with
 
 ```shell
 npm install -g zonix
-```
-
-or
-
-```shell
-yarn global add zonix
 ```
