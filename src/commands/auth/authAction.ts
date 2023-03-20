@@ -1,4 +1,4 @@
-import { config } from '../../config'
+import { writeConfig } from '../../config'
 import type { GeneralOptions } from '../../typings/General'
 
 export const authAction = (options: GeneralOptions) => {
@@ -8,6 +8,6 @@ export const authAction = (options: GeneralOptions) => {
     return console.log(`\n* use the --key or -k option to declare your API key`)
   }
 
-  config.apiKey = key
+  writeConfig({ apiKey: key })
   console.log(`Your apiKey: ${key}`)
 }
