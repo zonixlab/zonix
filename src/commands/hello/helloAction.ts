@@ -1,16 +1,30 @@
 import type { GeneralOptions } from '../../typings/General'
-import kleur from 'kleur'
+import { isAuthenticated } from '../../helpers/isAuthenticated'
+import { config } from '../../helpers/authSystem'
+import { openAIChat } from '../../helpers/openAIChat'
+import { yellow, green } from 'kleur/colors'
 
-export const helloAction = (options: GeneralOptions) => {
+export const helloAction = async (options: GeneralOptions) => {
   const name = options[Object.keys(options)[0]]
 
   if (!name) {
+    // verify authentication
+    const isAuth = await isAuthenticated()
+    if (!isAuth) return
+
+    const params = {
+      text: `Return me a random greeting from movies, cartoons or series`,
+      method: 'POST',
+      key: config.apiKey
+    }
+
+    const openAIChatResponse = await openAIChat(params)
+
     return console.log(
-      `Greetings, little ${kleur.green(
-        'Jedi'
-      )}. May the force be with you!\n\n* use --name or -n to declare your name and get a greeting`
+      green(`\n${openAIChatResponse.data}`),
+      yellow(`\n* use --name or -n to declare your name and get a greeting`)
     )
   }
 
-  console.log(`Hello, ${kleur.green(name)}!`)
+  console.log(green(`Hello, ${name}!`))
 }
