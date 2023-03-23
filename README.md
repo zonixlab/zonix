@@ -14,7 +14,7 @@ npm install -g zonix
 
 ## Authentication
 
-The first command you must run in `zonix` is auth to authenticate using the OpenAI API key:
+The first command you must run in `zonix` is `auth` to authenticate using the OpenAI API key:
 
 ```shell
 zonix auth --key API_KEY
@@ -36,5 +36,20 @@ zonix translate --text 'zonix is the best CLI in the world' --language portugues
 | Command | Options | Required | Description |
 | -------- | -------- | -------- | -------- |
 | `auth` | `-k` / `--key` | ✓ | Command used for authentication in the OpenAI API. |
-| `translate` | `-t` / `--text` <br> `-l` / `--language` | ✓ <br> ✓ | Command used to quickly translate text, regardless of language. |
+| `translate` | `-t` / `--text` <br> `-l` / `--language` | ✓ <br> ✓ | Command used to translate a text quickly, regardless of the requested language. |
 | `hello` | `-n` / `--name` | ✗ | Command used to receive an AI greeting (used to check if `zonix` is working). |
+
+## Contribute
+
+To contribute to the `zonix` project follow the steps mentioned below:
+
+1. Fork the `zonix` project.
+2. Clone the project (forked by you).
+3. Make necessary improvements, create new commands or fix a found bug.
+4. In case of creating a new command, you must add it to the command table of the `README.md` file, containing the name of the command, options, if the options are mandatory to execute the command or not, and a brief description of its functionality, following the standard.
+5. Log your change in the CHANGELOG.md file by following the [keepachangelog](https://keepachangelog.com/en/1.0.0/) documentation.
+6. Submit your Pull Request (PR) containing your changes.
+
+## Licensed
+
+Zonix is [MIT](https://github.com/zonixlab/zonix/blob/main/LICENSE) licensed.
