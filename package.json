@@ -1,6 +1,6 @@
 {
   "name": "zonix",
-  "version": "1.0.0-beta.13",
+  "version": "1.0.0-beta.14",
   "license": "MIT",
   "type": "commonjs",
   "main": "dist/index.js",
