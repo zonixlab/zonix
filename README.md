@@ -35,9 +35,9 @@ zonix translate --text 'zonix is the best CLI in the world' --language portugues
 
 | Command | Options | Required | Description |
 | -------- | -------- | -------- | -------- |
-| `auth` | `-k` / `--key` | ✓ | Command used for authentication in the OpenAI API. |
-| `translate` | `-t` / `--text` <br> `-l` / `--language` | ✓ <br> ✓ | Command used to translate a text quickly, regardless of the requested language. |
-| `hello` | `-n` / `--name` | ✗ | Command used to receive an AI greeting (used to check if `zonix` is working). |
+| `auth` | `-k` \| `--key` | ✓ | Command used for authentication in the OpenAI API. |
+| `translate` | `-t` \| `--text` <br> `-l` \| `--language` | ✓ <br> ✓ | Command used to translate a text quickly, regardless of the requested language. |
+| `hello` | `-n` \| `--name` | ✗ | Command used to receive an AI greeting (used to check if `zonix` is working). |
 
 ## Contribute
 
