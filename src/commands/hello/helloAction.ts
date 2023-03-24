@@ -26,5 +26,5 @@ export const helloAction = async (options: GeneralOptions) => {
     )
   }
 
-  console.log(green(`Hello, ${name}!`))
+  console.log(green(`\nHello, ${name}!`))
 }
