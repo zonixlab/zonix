@@ -38,12 +38,13 @@ zonix translate --text 'zonix is the best CLI in the world' --language portugues
 
 ## Commands
 
-| Command         | Options                                                           | Required        | Description                                                                                                                                                            |
-| --------------- | ----------------------------------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `auth`          | `-k` / `--key`                                                    | ✓               | Command used for authentication in the OpenAI API.                                                                                                                     |
-| `generate-test` | `-c` / `--component` <br> `-p` / `--path` <br> `-l` / `--library` | ✓ <br> ✓ <br> ✗ | Command used to create unit tests of your project's components. When passing the component's path, the test file is automatically generated in the component's folder. |
-| `translate`     | `-t` / `--text` <br> `-l` / `--language`                          | ✓ <br> ✓        | Command used to translate a text quickly, regardless of the requested language.                                                                                        |
-| `hello`         | `-n` / `--name`                                                   | ✗               | Command used to receive an AI greeting (used to check if `zonix` is working).                                                                                          |
+| Command                      | Options                                                              | Required                    | Description                                                                                                                                                            |
+| ---------------------------- | -------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _Performs a specific action_ | _Options for customizing action execution_                           | _If the option is required_ | _Short text describing the command_                                                                                                                                    |
+| `auth`                       | `-k` or `--key`                                                      | ✓                           | Command used for authentication in the OpenAI API.                                                                                                                     |
+| `generate-test`              | `-c` or `--component` <br> `-p` or `--path` <br> `-l` or `--library` | ✓ <br> ✓ <br> ✗             | Command used to create unit tests of your project's components. When passing the component's path, the test file is automatically generated in the component's folder. |
+| `translate`                  | `-t` or `--text` <br> `-l` or `--language`                           | ✓ <br> ✓                    | Command used to translate a text quickly, regardless of the requested language.                                                                                        |
+| `hello`                      | `-n` or `--name`                                                     | ✗                           | Command used to receive an AI greeting (used to check if `zonix` is working).                                                                                          |
 
 ## Contribute
 
