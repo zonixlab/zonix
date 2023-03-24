@@ -13,6 +13,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Command: auth.
 - Command: generate-test.
-- Login verification system
+- Login verification system.
 - Command: hello.
 - Command: translate.
