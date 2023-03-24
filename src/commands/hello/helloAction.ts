@@ -22,9 +22,9 @@ export const helloAction = async (options: GeneralOptions) => {
 
     return console.log(
       green(`\n${openAIChatResponse.data}`),
-      yellow(`\n* use --name or -n to declare your name and get a greeting`)
+      yellow(`\nuse --name or -n to declare your name and get a greeting`)
     )
   }
 
-  console.log(green(`Hello, ${name}!`))
+  console.log(green(`\nHello, ${name}!`))
 }
