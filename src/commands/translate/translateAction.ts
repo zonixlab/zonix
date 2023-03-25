@@ -29,5 +29,5 @@ export const translateAction = async (options: GeneralOptions) => {
 
   const openAIChatResponse = await openAIChat(params)
 
-  console.log(`\n> ${green(openAIChatResponse.data)}`)
+  console.log(`\n${green(openAIChatResponse.data)}`)
 }

@@ -1,4 +1,7 @@
+import path from 'path'
 import fs from 'fs'
+import globalDirs from 'global-dirs'
+import { red } from 'kleur/colors'
 
 interface Config {
   apiKey: string
@@ -6,7 +9,9 @@ interface Config {
 
 const readConfig = (): Config => {
   try {
-    const data = fs.readFileSync('config.json', 'utf8')
+    const packageDir = path.join(globalDirs.npm.packages, 'zonix')
+    const configPath = path.join(packageDir, 'config.json')
+    const data = fs.readFileSync(configPath, 'utf8')
     return JSON.parse(data)
   } catch {
     return { apiKey: '' }
@@ -15,9 +20,17 @@ const readConfig = (): Config => {
 
 const writeConfig = (config: Config) => {
   try {
-    fs.writeFileSync('config.json', JSON.stringify(config))
+    const packageDir = path.join(globalDirs.npm.packages, 'zonix')
+    const configPath = path.join(packageDir, 'config.json')
+    const configDir = path.dirname(configPath)
+
+    if (!fs.existsSync(configDir)) {
+      fs.mkdirSync(configDir, { recursive: true })
+    }
+
+    fs.writeFileSync(configPath, JSON.stringify(config))
   } catch (error) {
-    console.error(`Failed to write config file: ${error}`)
+    console.log(red(`\nFailed to write config file: ${error}`))
   }
 }
 
